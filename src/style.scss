@@ -1,3 +1,24 @@
+
 body {
-  background-color: green;
+  background-color: #279527;
+}
+
+
+$largeur: 800px;
+$hauteur: 600px;
+$border-radius: 10px; // Ajustez la valeur selon votre préférence
+$background-color-page: #279527; // Couleur de fond de la page
+$background-color-jeu: lighten($background-color-page, 10%); // Couleur de fond de la zone de jeu
+
+.zone-de-jeu {
+  width: $largeur;
+  height: $hauteur;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -#{$hauteur / 2};
+  margin-left: -#{$largeur / 2};
+  background-color: $background-color-jeu; // Fond vert plus clair
+  border: 5px solid rgb(255, 255, 255); // Bord blanc
+  border-radius: $border-radius; // Bords arrondis
 }
