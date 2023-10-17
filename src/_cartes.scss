@@ -1,91 +1,110 @@
 // Définissez les variables Sass pour la largeur et la hauteur de la carte
 $largeur-carte: 80px;
 $hauteur-carte: 125px;
+$espace-empilement: 20px; // Espace vertical entre chaque carte empilée
 
+// Styles de carte
 .carte__pique {
   height: $hauteur-carte;
   width: $largeur-carte;
   border: 2px solid blue;
   background-color: white;
   border-radius: 10px;
+  position: absolute;
 
   // Générer un nombre aléatoire entre -10 et 10 pour la rotation
-  $rotation: random() * 20 - 10;
+//   $rotation: random() * 20 - 10;
+//   transform: rotate($rotation + deg); // Correction : ajoutez "deg" pour spécifier les degrés
 
-  transform: rotate(#{$rotation}deg);
+  // Utilisez la boucle Sass pour empiler les cartes
+//   @for $i from 1 through 5 {
+//     top: ($i - 1) * $espace-empilement; // Ajustez la position verticale
+//     left: ($i - 1) * 20px; // Ajustez la position horizontale
+//     z-index: 5 - $i; // Ajustez la profondeur de l'empilement
+//   }
+    .carte__pique--bordure {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        margin: auto;
+        width: $largeur-carte; 
+        height: $hauteur-carte; 
+        background-color: white;
+        border: 3px solid blue;
+        border-radius: 10px;
+    }
+
+    .carte__pique--haut {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+    
+    .carte__pique--haut--all {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    
+    .carte__pique--haut--valeur {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    
+    .carte__pique--haut--image {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    
+    .carte__pique--milieu {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      font-size: 36px;
+    }
+    
+    .carte__pique--bas {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+    
+    .carte__pique--bas--image {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      transform: rotate(180deg);
+    }
+    
+    .carte__pique--bas--valeur {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      transform: rotate(180deg);
+    }
 }
 
-.carte__pique--bordure {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  margin: auto;
-  width: $largeur-carte; // Utilisez la variable pour la largeur
-  height: $hauteur-carte; // Utilisez la variable pour la hauteur
-  background-color: white;
-  border: 3px solid blue;
-  border-radius: 10px;
+
+// Générez des classes pour différentes largeurs de carte
+// @for $i from 1 through 5 {
+//     .carte-#{$i} {
+//       top: 50px * ($i - 1);
+
+//     }
+// }
+
+//faire une main
+$nbCarte: 5;
+
+.carte__pique{
+@for $i from 1 through $nbCarte {
+     .carte-#{$i} {
+         left: $i * 20px;
+        rotate: 20deg * $i - 50deg;
+         top: $i * 10px;
+         top: (5 - $i) * 10px;
+     }
 }
-  
-  .carte__pique--haut {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-  }
-  
-.carte__pique--haut--all{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-}
-
-.carte__pique--haut--valeur{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-}
-.carte__pique--haut--image{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-}
-
-
-  .carte__pique--milieu {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-   
-  }
-  
-.carte__pique--milieu--image{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    font-size: 36px ;
-
-}
-
-
-  .carte__pique--bas {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-  }
-  
-.carte__pique--bas--image{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    transform: rotate(180deg);
-}
-
-.carte__pique--bas--valeur{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    transform: rotate(180deg);
 }

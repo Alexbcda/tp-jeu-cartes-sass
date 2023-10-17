@@ -1,6 +1,5 @@
 @import 'cartes';
 
-
 $background-color: #279527;
 $border-color: lightgrey;
 $background-color-page: lighten($background-color, 10%); /* Utilisation de lighten() pour éclaircir la couleur de fond */
@@ -8,7 +7,7 @@ $background-color-page: lighten($background-color, 10%); /* Utilisation de light
 
 body {
     margin: 0;
-  }
+}
 
 
 .Tapis {
@@ -28,4 +27,5 @@ body {
   border-radius: 60px;
   background-color: $background-color-page; /* Utilisation de la couleur éclaircie pour l'arrière-plan */
   border: 5px solid $border-color; /* Bordure de 5 pixels en gris clair */
+  position: relative;
 }
