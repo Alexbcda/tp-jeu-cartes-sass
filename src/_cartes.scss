@@ -1,27 +1,31 @@
+// Définissez les variables Sass pour la largeur et la hauteur de la carte
+$largeur-carte: 80px;
+$hauteur-carte: 125px;
+
 .carte__pique {
-    height: 150px;
-    width: 100px;
-    border: 2px solid blue;
-    background-color: white;
-    border-radius: 10px;
-  
-    // Générer un nombre aléatoire entre -10 et 10 pour la rotation
-    $rotation: random() * 20 - 10; 
-  
-    transform: rotate(#{$rotation}deg);
-  }
-  .carte__pique--bordure {
-    
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    margin: auto;
-    width: 80px;
-    height: 140px;
-    background-color: white;
-    border: 3px solid blue;
-    border-radius: 10px;
-  }
+  height: $hauteur-carte;
+  width: $largeur-carte;
+  border: 2px solid blue;
+  background-color: white;
+  border-radius: 10px;
+
+  // Générer un nombre aléatoire entre -10 et 10 pour la rotation
+  $rotation: random() * 20 - 10;
+
+  transform: rotate(#{$rotation}deg);
+}
+
+.carte__pique--bordure {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: auto;
+  width: $largeur-carte; // Utilisez la variable pour la largeur
+  height: $hauteur-carte; // Utilisez la variable pour la hauteur
+  background-color: white;
+  border: 3px solid blue;
+  border-radius: 10px;
+}
   
   .carte__pique--haut {
     display: flex;
