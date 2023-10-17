@@ -1,0 +1,104 @@
+.carte-as-pique {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 150px;
+    background-color: white; 
+    border: 3px solid blue;
+    border-radius: 10px; 
+    position: relative;
+    bottom: -10px; 
+    left: 10px;
+    overflow: hidden; 
+    position: relative; 
+}
+
+.carte-as-pique-bordure-interieur {
+    position: absolute; 
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto; 
+    width: 80px;
+    height: 120px;
+    background-color: white; 
+    border: 3px solid blue; 
+    border-radius: 10px; 
+}
+
+.carte-top {
+    display: flex;
+
+
+}
+
+.carte-coin{ 
+
+
+}
+
+
+
+.carte-as-pique-bordure-interieur-valeur {
+    display: flex;
+    flex-direction: row; 
+    justify-content: flex-start; 
+    color: black; 
+  
+}
+
+
+.carte-as-pique-bordure-interieur-pic {
+    display: flex;
+    flex-direction: row; 
+    justify-content: flex-start; 
+    color: black;
+   
+}
+
+
+.carte-middle {
+
+    display: flex;
+}
+
+.carte-middle-color {
+
+    display: flex;
+}
+
+
+.carte-as-pique-bordure-interieur-pic {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center; 
+    color: black; 
+   
+}
+
+.carte-bottom {
+display: flex;
+}
+
+.carte-coin {
+    display:flex
+}
+.carte-as-pique-bordure-interieur-pic-reverse {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end; 
+    color: black; 
+    transform: rotate(180deg);
+  
+}
+
+.carte-as-pique-bordure-interieur-valeur-reverse {
+    display: flex;
+    flex-direction: row; 
+    justify-content: flex-end; 
+    color: black; 
+    transform:rotate(180deg);
+   
+}

@@ -1,0 +1,87 @@
+.carte__pique {
+    height: 150px;
+    width: 100px;
+    border: 2px solid blue;
+    background-color: white;
+    border-radius: 10px;
+  
+    // Générer un nombre aléatoire entre -10 et 10 pour la rotation
+    $rotation: random() * 20 - 10; 
+  
+    transform: rotate(#{$rotation}deg);
+  }
+  .carte__pique--bordure {
+    
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: auto;
+    width: 80px;
+    height: 140px;
+    background-color: white;
+    border: 3px solid blue;
+    border-radius: 10px;
+  }
+  
+  .carte__pique--haut {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  
+.carte__pique--haut--all{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.carte__pique--haut--valeur{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.carte__pique--haut--image{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+
+  .carte__pique--milieu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+   
+  }
+  
+.carte__pique--milieu--image{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 36px ;
+
+}
+
+
+  .carte__pique--bas {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  
+.carte__pique--bas--image{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    transform: rotate(180deg);
+}
+
+.carte__pique--bas--valeur{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    transform: rotate(180deg);
+}

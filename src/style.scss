@@ -1,24 +1,31 @@
+@import 'cartes';
+
+
+$background-color: #279527;
+$border-color: lightgrey;
+$background-color-page: lighten($background-color, 10%); /* Utilisation de lighten() pour éclaircir la couleur de fond */
+
 
 body {
-  background-color: #279527;
+    margin: 0;
+  }
+
+
+.Tapis {
+  display: flex;
+  background-color: $background-color;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
 }
 
-
-$largeur: 800px;
-$hauteur: 600px;
-$border-radius: 10px; // Ajustez la valeur selon votre préférence
-$background-color-page: #279527; // Couleur de fond de la page
-$background-color-jeu: lighten($background-color-page, 10%); // Couleur de fond de la zone de jeu
-
 .zone-de-jeu {
-  width: $largeur;
-  height: $hauteur;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -#{$hauteur / 2};
-  margin-left: -#{$largeur / 2};
-  background-color: $background-color-jeu; // Fond vert plus clair
-  border: 5px solid rgb(255, 255, 255); // Bord blanc
-  border-radius: $border-radius; // Bords arrondis
+  width: 800px;
+  height: 600px;
+  border-radius: 60px;
+  background-color: $background-color-page; /* Utilisation de la couleur éclaircie pour l'arrière-plan */
+  border: 5px solid $border-color; /* Bordure de 5 pixels en gris clair */
 }

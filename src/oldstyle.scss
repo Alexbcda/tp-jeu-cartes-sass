@@ -1,0 +1,26 @@
+@import 'cartes';
+
+.Tapis {
+  background-color: #279527;
+}
+
+
+$largeur: 800px;
+$hauteur: 600px;
+$border-radius: 10px; 
+$background-color-page: #279527; 
+$background-color-jeu: lighten($background-color-page, 10%); 
+
+.zone-de-jeu {
+  width: $largeur;
+  height: $hauteur;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -#{$hauteur / 2};
+  margin-left: -#{$largeur / 2};
+  background-color: $background-color-jeu; 
+  border: 5px solid rgb(255, 255, 255); 
+  border-radius: $border-radius; 
+}
+
